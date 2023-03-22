@@ -39,17 +39,40 @@ body {
 #Body__left > section > p {
     display: flex;
     flex-direction: column;
+    gap: 1vmin;
+}
+#Body__left > section > p > span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 #Body__left > section > p > span > img {
     height: 15px;
+}
+#Body__left > section > p > span > span {
+    font-size: large;
+}
+#Body__left > section > p > span > span > a {
+    text-decoration: none;
 }
 #Left__LanguesSection > span {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+#Left__LanguesSection > span > span {
+    font-weight: bold;
+}
+#Left__LanguesSection > span > span:nth-child(even) {
+    font-size: x-large;
+}
 #Left__CompetencesSection > ul,
 #Left__CentresDInterets > ul {
     padding-left: 3vmin;
+    list-style: square;
+}
+#Left__CompetencesSection > ul > li,
+#Left__CentresDInterets > ul > li {
+    font-size: large;
 }
 
 /*  Body Right  */
@@ -64,19 +87,90 @@ body {
 #Body__right > h1 > span:nth-child(3) {
     font-size: 27px;
 }
+#Body__right > section {
+    line-height: 1.2;
+}
+#Body__right > section > p {
+    letter-spacing: 1.5;
+}
 #Body__right > section > h2,
 #Right__ExperiencesProfessionnelles > h2 {
     border-bottom: 1px black solid; 
 }
+#Right__ExperiencesProfessionnelles > div {
+    padding-left: 3vmin;
+}
+#Right__ExperiencesProfessionnelles > div > h2 {
+    font-size: 26px;
+}
+#Right__ExperiencesProfessionnelles > div > h3 {
+    font-size: 20px;
+}
 #Right__ExperiencesProfessionnelles > div > ul {
     padding-left: 3vmin;
+    list-style: square;
+}
+#Right__ExperiencesProfessionnelles > div > ul > li {
+    font-size: large;
 }
 #Right__Formation > h2 {
     border-bottom: 1px black solid;
+}
+#Right__Formation > div {
+    padding-left: 3vmin;
 }
 #Right__Formation > div > h2 {
     margin-bottom: 0;
 }
 #Right__Formation > div > h3 {
     margin-top: 0;
+}
+
+@media only screen and (max-device-width: 768px) {
+    body {
+        gap: 2vmin;
+    }
+
+    #Body__left {
+        padding: 1vmin;
+    }
+    #Body__left > section > p {
+        row-gap: 1vmin;
+    }
+    #Body__left > section > p > span > img {
+        height: 25px;
+    }
+    #Body__left > section > p > span > span {
+        font-size: x-large;
+    }
+    #Left__LanguesSection > span {
+        font-size: x-large;
+    }
+    #Left__LanguesSection > span > span:nth-child(even) {
+        font-size: xx-large;
+    }
+    #Left__CompetencesSection > ul > li, 
+    #Left__CentresDInterets > ul > li {
+        font-size: x-large;
+    }
+
+
+    #Body__right {
+        padding: 1vmin;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vmin;
+    }
+    #Body__right > section {
+        line-height: 1;
+    }
+    #Body__right > section > h2 {
+        font-size: xx-large;
+    }
+    #Body__right > section > p {
+        letter-spacing: 1;
+        font-size: x-large;
+        text-align: justify;
+        line-height: 1.1;
+    }
 }
